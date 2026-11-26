@@ -96,6 +96,22 @@ do
                 echo "File does not exist!"
             fi
             ;;
+        7)
+            read -p "Enter filename: " name
+
+             if [ -f "$DIR/$name" ]; then
+                read -p "Are you sure you want to delete? (y/n): " confirm
+
+                if [ "$confirm" = "y" ] || [ "$confirm" = "Y" ]; then
+                    rm "$DIR/$name"
+                    echo "File deleted successfully!"
+                else
+                    echo "Deletion cancelled!"
+                fi
+            else
+                echo "File does not exist!"
+            fi
+            ;;
         8)
             echo "Thank you for using File Security Manager!"
             break
