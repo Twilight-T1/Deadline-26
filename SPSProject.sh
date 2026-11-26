@@ -17,8 +17,13 @@ do
     echo "   FILE SECURITY MANAGER"
     echo "================================"
     echo "1. Create a new file"
+    echo "2. Display File Information"
     echo "3. Make file read-only"
-    echo "6. Display current permissions."
+    echo "4. Give Full to Owner Only"
+    echo "5. Remove Permission from Others"
+    echo "6. Display current permissions"
+    echo "7. Delete a File"
+    echo "8. Exit."
     echo "================================"
 
     read -p "Enter your choice: " choice
@@ -81,6 +86,14 @@ do
             else
                 echo "File does not exist!"
             fi
+            ;;
+        8)
+            echo "Thank you for using File Security Manager!"
+            break
+            ;;
+
+        *)
+            echo "Invalid choice! Please try again."
             ;;
 
     esac
