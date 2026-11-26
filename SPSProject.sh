@@ -51,6 +51,17 @@ do
             fi
             ;;    
 
+       5)
+            read -p "Enter filename: " name
+
+            if [ -f "$DIR/$name" ]; then
+                chmod go-rwx "$DIR/$name"
+                echo "Permissions removed from group and others!"
+            else
+                echo "File does not exist!"
+            fi
+            ;;
+            
         6)
             read -p "Enter filename: " name
 
