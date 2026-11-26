@@ -49,7 +49,18 @@ do
             else
                 echo "File does not exist!"
             fi
-            ;;    
+            ;; 
+
+           4)
+            read -p "Enter filename: " name
+
+            if [ -f "$DIR/$name" ]; then
+                chmod 700 "$DIR/$name"
+                echo "Full permission given to owner only!"
+            else
+                echo "File does not exist!"
+            fi
+            ;;   
 
        5)
             read -p "Enter filename: " name
