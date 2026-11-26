@@ -49,7 +49,7 @@ do
 
             if [ -f "$DIR/$name" ]; then
                 echo "File information:"
-                ls -l "$DIR/$name"
+                ls "$DIR/$name"
             else
                 echo "File does not exist!"
             fi
