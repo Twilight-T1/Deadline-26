@@ -37,6 +37,16 @@ do
                 fi
             fi
             ;;
+             2)
+            read -p "Enter filename: " name
+
+            if [ -f "$DIR/$name" ]; then
+                echo "File information:"
+                ls -l "$DIR/$name"
+            else
+                echo "File does not exist!"
+            fi
+            ;;
     esac
     echo ""
 done
